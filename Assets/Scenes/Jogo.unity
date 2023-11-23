@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 1803590638}
     - target: {fileID: 2138119095897738697, guid: 60eeade7d23730c40bc06c636711e04e, type: 3}
       propertyPath: proximoLevel
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5904723231397464341, guid: 60eeade7d23730c40bc06c636711e04e, type: 3}
       propertyPath: m_Name

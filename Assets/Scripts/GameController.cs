@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Text levelTexto;
     private float pontos = 0f;
     private int level = 1;
-    [SerializeField] private float proximoLevel = 7f;
+    [SerializeField] private float proximoLevel = 5f;
     [SerializeField] private AudioClip levelUp;
 
     void Start()
@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
 
     private void GerarPontos()
     {
-        pontos += Time.deltaTime;
+        pontos += Time.deltaTime * level;
         pontosTexto.text = "Pontos: " + Mathf.Round(pontos).ToString();
     }
 }
