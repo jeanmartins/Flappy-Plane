@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D aviaoRB;
     [SerializeField] private float velocidade = 5f;
+    [SerializeField] private GameObject puff;
     void Start()
     {
         this.aviaoRB = GetComponent<Rigidbody2D>();
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             this.aviaoRB.velocity = Vector2.up * velocidade;
+            GameObject meuPuff = Instantiate(puff, transform.position, Quaternion.identity);
+            Destroy(meuPuff, 2f);
         }
     }
 

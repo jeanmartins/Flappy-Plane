@@ -15,10 +15,10 @@ public class GameController : MonoBehaviour
     private float pontos = 0f;
     private int level = 1;
     [SerializeField] private float proximoLevel = 7f;
+    [SerializeField] private AudioClip levelUp;
 
     void Start()
     {
-
     }
 
     void Update()
@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
         levelTexto.text = "Level: " + level;
         if (pontos > proximoLevel)
         {
+            AudioSource.PlayClipAtPoint(levelUp, transform.position);
             level++;
             proximoLevel *= 2;
         }
